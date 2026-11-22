@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+# Real tool results and answers stay local: they carry customer figures.
+private/
+*.local.*

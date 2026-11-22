@@ -1,0 +1,42 @@
+[
+  {
+    "tool": "weekly_summary",
+    "params": {"week_start": "2026-03-09", "threshold_pct": 10},
+    "summary": {
+      "offices": [
+        {
+          "office": "Office A",
+          "collections": {"this_week": 48210.37, "trailing_8wk_avg": 41980.12, "pct_vs_avg": 14.8, "flag": true},
+          "net_production": {"this_week": 61377.50, "trailing_8wk_avg": 59420.08, "pct_vs_avg": 3.3},
+          "fill_rate": 0.7425
+        },
+        {
+          "office": "Office B",
+          "collections": {"this_week": 30155.90, "trailing_8wk_avg": 33870.45, "pct_vs_avg": -11.0, "flag": true},
+          "net_production": {"this_week": 40210.00, "trailing_8wk_avg": 39874.62, "pct_vs_avg": 0.8},
+          "fill_rate": 0.6810
+        }
+      ]
+    },
+    "notes": ["Days with fewer than 11 patients are hidden", "8-week average excludes this week"]
+  },
+  {
+    "tool": "production_by_provider",
+    "params": {"month": "2026-02"},
+    "rows": [
+      {"office": "Office A", "provider": "Provider A", "gross_production": 38250.00, "adjustments": -2140.55, "net_production": 36109.45},
+      {"office": "Office A", "provider": "Provider B", "gross_production": 29870.25, "adjustments": -1205.00, "net_production": 28665.25},
+      {"office": "Office B", "provider": "Provider C", "gross_production": 22410.80, "adjustments": -980.40, "net_production": 21430.40}
+    ],
+    "summary": {"net_production_total": 86205.10, "providers": 3}
+  },
+  {
+    "tool": "patient_ar_aging",
+    "params": {"office": "all"},
+    "rows": [
+      {"office": "Office A", "bal_0_30": 52310.44, "bal_31_60": 18220.10, "bal_61_90": 9105.66,
+       "bal_over_90": 61480.25, "debit_balances": 141116.45, "credit_balances": -14890.30, "bal_total": 126226.15}
+    ],
+    "offices_without_data": [{"office": "Office C", "status": "unknown: not connected yet"}]
+  }
+]
